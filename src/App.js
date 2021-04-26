@@ -5,7 +5,6 @@ import axios from "axios"
 import "./app.css";
 import Register from "./components/Register";
 import Login from "./components/Login";
-import { API_URL } from "./config/api";
 import { PIN_URL } from "./config/prod";
 
 function App() {

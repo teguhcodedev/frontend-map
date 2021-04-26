@@ -1,6 +1,7 @@
 import { Room, Cancel } from '@material-ui/icons';
 import axios from "axios"
 import React, { useState, useRef } from 'react'
+import { LOGIN_URL } from '../config/dev';
 import "./login.css";
 
 const Login = ({ setShowLogin, myStorage,setCurrentUser ,setShowRegister}) => {
@@ -18,7 +19,7 @@ const Login = ({ setShowLogin, myStorage,setCurrentUser ,setShowRegister}) => {
         }
 
         try {
-            const res = await axios.post("http://localhost:9898/api/user/login", user);
+            const res = await axios.post(LOGIN_URL, user);
             myStorage.setItem("user", res.data.username)
             setCurrentUser(res.data.username)
             setShowLogin(false)

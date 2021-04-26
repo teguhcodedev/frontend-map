@@ -1,6 +1,7 @@
 import { Room, Cancel } from '@material-ui/icons';
 import axios from "axios"
 import React, { useState, useRef } from 'react'
+import { REGIS_URL } from '../config/prod';
 import "./register.css";
 
 const Register = ({ setShowRegister,setShowLogin }) => {
@@ -20,7 +21,7 @@ const Register = ({ setShowRegister,setShowLogin }) => {
         }
 
         try {
-            const res = await axios.post("http://localhost:9898/api/user/register", newUser);
+            const res = await axios.post(REGIS_URL, newUser);
             setError(false)
             setShowLogin(false)
         } catch (error) {

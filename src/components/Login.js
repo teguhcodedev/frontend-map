@@ -1,7 +1,7 @@
 import { Room, Cancel } from '@material-ui/icons';
 import axios from "axios"
 import React, { useState, useRef } from 'react'
-import { LOGIN_URL } from '../config/dev';
+import { LOGIN_URL } from '../config/prod';
 import "./login.css";
 
 const Login = ({ setShowLogin, myStorage,setCurrentUser ,setShowRegister}) => {
